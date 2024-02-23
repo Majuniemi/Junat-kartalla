@@ -1,12 +1,98 @@
-html {
-    background-color: black;
-    color: white
+:root {
+    --header-footer-background-color: #333;
+    --header-footer-color: #f3a108;
+    --header-footer-accent-color: #54b3d6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.header {
+    background-color: var(--header-footer-background-color);
+    color: var(--header-footer-accent-color);
+    padding: 1em 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 1em 0 0 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 4em;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-item a {
+    box-shadow: inset 0 0 0 0 var(--header-footer-color);
+    color: var(--header-footer-color);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.nav-item a:hover {
+    box-shadow: inset 100px 0 0 0 var(--header-footer-accent-color);
+    color: #fff;
+}
+
+.map-container {
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    height: 60vh;
 }
 
 #map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: var(--header-footer-background-color);
+    color: var(--header-footer-color);
+    padding: 1em 0;
+    text-align: center;
+}
+
+footer a {
+    box-shadow: inset 0 0 0 0 var(--header-footer-color);
+    color: var(--header-footer-color);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+footer a:hover {
+    box-shadow: inset 100px 0 0 0 var(--header-footer-accent-color);
+    color: #fff;
 }
